@@ -1,0 +1,46 @@
+﻿@using Aula03.WebApp.Controllers;
+@model IEnumerable<Aula03.WebApp.Models.Produto>
+
+@{
+    ViewData["Title"] = "Produtos";
+}
+
+<h1>Cadastro de produtos</h1>
+
+<p>
+    <a asp-action="@nameof(ProdutosController.Novo)">Novo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Unidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PesoGramas)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Unidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PesoGramas)
+            </td>
+            <td>
+                <a asp-action="@nameof(ProdutosController.Selecionar)" asp-route-id="@item.Id">Selecionar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
