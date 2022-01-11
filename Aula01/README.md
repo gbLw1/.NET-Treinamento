@@ -1,0 +1,13 @@
+# Aula 01
+- Explicação .NET
+- Tipos de dados
+- Comportamentos da memória
+    - Memória Heap vs memória Stack
+    - Exemplo tipo por referência vs tipo por valor
+- Casting
+- Operadores
+- Estruturas de controle
+- Laços de repetição
+- Conversão de tipos
+- Enumeradores
+- Exceptions 
